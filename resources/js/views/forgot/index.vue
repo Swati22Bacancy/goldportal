@@ -1,60 +1,72 @@
 <template>
   <div>
-    <Nav />
-    <div class="container">
-      <div class="row justify-content-center">
+    <!-- <Nav /> -->
+    <div class="login-container">
+      <!---- Navbar -->
+      <!-- Outer Row -->
+      <div
+        class="row justify-content-center"
+        v-if="verificationStatus"
+      >
         <div class="col-xl-10 col-lg-12 col-md-9">
-          <div class="card o-hidden border-0 shadow-lg my-5">
+          <div
+            class="alert alert-dismissible fade show mt-5"
+            v-bind:class="verificationAlertClasses"
+            role="alert"
+          >
+            <div>{{ verificationMessage }}</div>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="alert"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center login-div">
+        <div class="col-xl-10 col-lg-12 col-md-9">
+          <div class="card o-hidden border-0 shadow-lg my-5 login-form">
             <div class="card-body p-0">
               <!-- Nested Row within Card Body -->
               <div class="row">
-                <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                   <div class="p-5">
-                    <div v-if="!emailSent">
-                      <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-2">
-                          Forgot Your Password?
-                        </h1>
-                        <p class="mb-4">
-                          We get it, stuff happens. Just enter your email
-                          address below and we'll send you a link to reset your
-                          password!
-                        </p>
-                      </div>
-                      <form class="user" @submit.prevent="forgot">
-                        <div class="form-group">
+                    <div class="text-center">
+                      <h6 style="text-align:center;color:#fff;padding-bottom: 20px;">Login to Start</h6>
+                    </div>
+                    <form class="user" @submit.prevent="forgot">
+                      <div class="form-outline">
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                              <div class="input-icons">
+                              <span class="fas fa-envelope"></span>
+                              </div>
+                          </div>
                           <input
                             type="email"
-                            class="form-control form-control-user"
+                            class="form-control custom-input"
                             id="exampleInputEmail"
                             aria-describedby="emailHelp"
                             placeholder="Enter Email Address..."
                             v-model="email"
                           />
                         </div>
-                        <LoadingButton
-                          text="Reset password"
-                          v-bind:isLoading="isLoading"
-                        />
-                      </form>
-                    </div>
-                    <div v-else>
-                      <span class="h4">
-                        <i class="far fa-check-circle text-success"></i> Check
-                        your email!
-                      </span>
-                    </div>
-                    <hr />
+                      </div>
+                      <div class="form-outline py-3" style="text-align: center;">
+                        <button
+                          type="submit"
+                          class="btn submit-btn"
+                        >
+                          Reset Password
+                        </button>
+                      </div>
+                    </form>
+                    
                     <div class="text-center">
-                      <router-link class="small" to="/register"
-                        >Create an Account!</router-link
-                      >
-                    </div>
-                    <div class="text-center">
-                      <router-link class="small" to="/login"
-                        >Already have an account? Login!</router-link
-                      >
+                      <router-link to="/login" class="nav-item nav-link center-white">Already have an account? Login!</router-link>
                     </div>
                   </div>
                 </div>

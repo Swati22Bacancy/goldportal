@@ -810,7 +810,7 @@ var staticRenderFns = [
                         },
                         [
                           _vm._v(
-                            "\n                Earnings (Monthly)\n              "
+                            "\n                Earnings (Monthly) 1\n              "
                           )
                         ]
                       ),
@@ -1011,7 +1011,7 @@ var staticRenderFns = [
               },
               [
                 _c("h6", { staticClass: "m-0 font-weight-bold text-primary" }, [
-                  _vm._v("Earnings Overview")
+                  _vm._v("Earnings Overview 1")
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "dropdown no-arrow" }, [

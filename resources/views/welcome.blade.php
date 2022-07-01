@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/adminstyle.css') }}" type="text/css">
 
     <title>{{ config('app.name') }}</title>
 
@@ -17,6 +17,6 @@
         <app></app>
     </div>
 </body>
-<script src="{{ mix('/js/app.js') }}"></script>
+<script src="{{ asset('js/adminjs.js') }}"></script>
 
 </html>

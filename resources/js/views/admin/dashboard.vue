@@ -26,7 +26,7 @@
                     mb-1
                   "
                 >
-                  Earnings (Monthly)
+                  Earnings (Monthly) 1
                 </div>
                 <div class="h5 mb-0 font-weight-bold text-gray-800">
                   $40,000
@@ -151,7 +151,7 @@
               justify-content-between
             "
           >
-            <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Earnings Overview 1</h6>
             <div class="dropdown no-arrow">
               <a
                 class="dropdown-toggle"

@@ -77306,6 +77306,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "sidebar-brand-text mx-3" }, [
+            _vm._v("SB Admin "),
             _c("sup", [_vm._v("2")])
           ])
         ]

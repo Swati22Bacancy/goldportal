@@ -124,6 +124,17 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -320,61 +331,56 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("Nav"),
-      _vm._v(" "),
-      _c("div", { staticClass: "container" }, [
-        _vm.verificationStatus
-          ? _c("div", { staticClass: "row justify-content-center" }, [
-              _c("div", { staticClass: "col-xl-10 col-lg-12 col-md-9" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "alert alert-dismissible fade show mt-5",
-                    class: _vm.verificationAlertClasses,
-                    attrs: { role: "alert" }
-                  },
-                  [
-                    _c("div", [_vm._v(_vm._s(_vm.verificationMessage))]),
-                    _vm._v(" "),
-                    _vm._m(0)
-                  ]
-                )
-              ])
+  return _c("div", [
+    _c("div", { staticClass: "login-container" }, [
+      _vm.verificationStatus
+        ? _c("div", { staticClass: "row justify-content-center" }, [
+            _c("div", { staticClass: "col-xl-10 col-lg-12 col-md-9" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "alert alert-dismissible fade show mt-5",
+                  class: _vm.verificationAlertClasses,
+                  attrs: { role: "alert" }
+                },
+                [
+                  _c("div", [_vm._v(_vm._s(_vm.verificationMessage))]),
+                  _vm._v(" "),
+                  _vm._m(0)
+                ]
+              )
             ])
-          : _vm._e(),
-        _vm._v(" "),
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("div", { staticClass: "col-xl-10 col-lg-12 col-md-9" }, [
-            _c(
-              "div",
-              { staticClass: "card o-hidden border-0 shadow-lg my-5" },
-              [
-                _c("div", { staticClass: "card-body p-0" }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", {
-                      staticClass: "col-lg-6 d-none d-lg-block bg-login-image"
-                    }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-lg-6" }, [
-                      _c("div", { staticClass: "p-5" }, [
-                        _vm._m(1),
-                        _vm._v(" "),
-                        _c(
-                          "form",
-                          {
-                            staticClass: "user",
-                            on: {
-                              submit: function($event) {
-                                $event.preventDefault()
-                                return _vm.login.apply(null, arguments)
-                              }
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "row justify-content-center login-div" }, [
+        _c("div", { staticClass: "col-xl-10 col-lg-12 col-md-9" }, [
+          _c(
+            "div",
+            { staticClass: "card o-hidden border-0 shadow-lg my-5 login-form" },
+            [
+              _c("div", { staticClass: "card-body p-0" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-12" }, [
+                    _c("div", { staticClass: "p-5" }, [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c(
+                        "form",
+                        {
+                          staticClass: "user",
+                          on: {
+                            submit: function($event) {
+                              $event.preventDefault()
+                              return _vm.login.apply(null, arguments)
                             }
-                          },
-                          [
-                            _c("div", { staticClass: "form-group" }, [
+                          }
+                        },
+                        [
+                          _c("div", { staticClass: "form-outline" }, [
+                            _c("div", { staticClass: "input-group mb-3" }, [
+                              _vm._m(2),
+                              _vm._v(" "),
                               _c("input", {
                                 directives: [
                                   {
@@ -384,7 +390,7 @@ var render = function() {
                                     expression: "email"
                                   }
                                 ],
-                                staticClass: "form-control form-control-user",
+                                staticClass: "form-control custom-input",
                                 attrs: {
                                   type: "email",
                                   id: "exampleInputEmail",
@@ -401,9 +407,13 @@ var render = function() {
                                   }
                                 }
                               })
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "form-group" }, [
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "form-outline" }, [
+                            _c("div", { staticClass: "input-group mb-3" }, [
+                              _vm._m(3),
+                              _vm._v(" "),
                               _c("input", {
                                 directives: [
                                   {
@@ -413,7 +423,7 @@ var render = function() {
                                     expression: "password"
                                   }
                                 ],
-                                staticClass: "form-control form-control-user",
+                                staticClass: "form-control custom-input",
                                 attrs: {
                                   type: "password",
                                   id: "exampleInputPassword",
@@ -429,71 +439,40 @@ var render = function() {
                                   }
                                 }
                               })
-                            ]),
-                            _vm._v(" "),
-                            _vm._m(2),
-                            _vm._v(" "),
-                            _c(
-                              "button",
-                              {
-                                staticClass:
-                                  "btn btn-primary btn-user btn-block",
-                                attrs: { type: "submit" }
-                              },
-                              [
-                                _vm._v(
-                                  "\n                      Login\n                    "
-                                )
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("hr"),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "text-center" },
-                          [
-                            _c(
-                              "router-link",
-                              {
-                                staticClass: "small",
-                                attrs: { to: "/forgot-password" }
-                              },
-                              [_vm._v("Forgot Password?")]
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "text-center" },
-                          [
-                            _c(
-                              "router-link",
-                              {
-                                staticClass: "small",
-                                attrs: { to: "/register" }
-                              },
-                              [_vm._v("Create an Account!")]
-                            )
-                          ],
-                          1
-                        )
-                      ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _vm._m(4),
+                          _vm._v(" "),
+                          _vm._m(5)
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "text-center" },
+                        [
+                          _c(
+                            "router-link",
+                            {
+                              staticClass: "nav-item nav-link center-white",
+                              attrs: { to: "/forgot-password" }
+                            },
+                            [_vm._v("Forgot Password ?")]
+                          )
+                        ],
+                        1
+                      )
                     ])
                   ])
                 ])
-              ]
-            )
-          ])
+              ])
+            ]
+          )
         ])
       ])
-    ],
-    1
-  )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
@@ -518,8 +497,36 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center" }, [
-      _c("h1", { staticClass: "h4 text-gray-900 mb-4" }, [
-        _vm._v("Welcome Back!")
+      _c(
+        "h6",
+        {
+          staticStyle: {
+            "text-align": "center",
+            color: "#fff",
+            "padding-bottom": "20px"
+          }
+        },
+        [_vm._v("Login to Start")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-append" }, [
+      _c("div", { staticClass: "input-icons" }, [
+        _c("span", { staticClass: "fas fa-envelope" })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "input-group-append" }, [
+      _c("div", { staticClass: "input-icons" }, [
+        _c("span", { staticClass: "fas fa-lock" })
       ])
     ])
   },
@@ -528,22 +535,45 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "form-group" }, [
-      _c("div", { staticClass: "custom-control custom-checkbox small" }, [
-        _c("input", {
-          staticClass: "custom-control-input",
-          attrs: { type: "checkbox", id: "customCheck" }
-        }),
-        _vm._v(" "),
-        _c(
-          "label",
-          {
-            staticClass: "custom-control-label",
-            attrs: { for: "customCheck" }
-          },
-          [_vm._v("Remember Me")]
-        )
-      ])
+      _c(
+        "div",
+        { staticClass: "custom-control custom-checkbox small center-white" },
+        [
+          _c("input", {
+            staticClass: "custom-control-input",
+            attrs: { type: "checkbox", id: "customCheck" }
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass: "custom-control-label",
+              attrs: { for: "customCheck" }
+            },
+            [_vm._v("Remember Me")]
+          )
+        ]
+      )
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "form-outline py-3",
+        staticStyle: { "text-align": "center" }
+      },
+      [
+        _c(
+          "button",
+          { staticClass: "btn submit-btn", attrs: { type: "submit" } },
+          [_vm._v("\n                        Login\n                      ")]
+        )
+      ]
+    )
   }
 ]
 render._withStripped = true

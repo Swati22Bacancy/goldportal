@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Nav />
-    <div class="container">
+    <!-- <Nav /> -->
+    <div class="login-container">
       <!---- Navbar -->
       <!-- Outer Row -->
       <div
@@ -26,40 +26,53 @@
           </div>
         </div>
       </div>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center login-div">
         <div class="col-xl-10 col-lg-12 col-md-9">
-          <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card o-hidden border-0 shadow-lg my-5 login-form">
             <div class="card-body p-0">
               <!-- Nested Row within Card Body -->
               <div class="row">
-                <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                   <div class="p-5">
                     <div class="text-center">
-                      <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                      <h6 style="text-align:center;color:#fff;padding-bottom: 20px;">Login to Start</h6>
                     </div>
                     <form class="user" @submit.prevent="login">
-                      <div class="form-group">
-                        <input
-                          type="email"
-                          class="form-control form-control-user"
-                          id="exampleInputEmail"
-                          aria-describedby="emailHelp"
-                          placeholder="Enter Email Address..."
-                          v-model="email"
-                        />
+                      <div class="form-outline">
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                              <div class="input-icons">
+                              <span class="fas fa-envelope"></span>
+                              </div>
+                          </div>
+                          <input
+                            type="email"
+                            class="form-control custom-input"
+                            id="exampleInputEmail"
+                            aria-describedby="emailHelp"
+                            placeholder="Enter Email Address..."
+                            v-model="email"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-outline">
+                        <div class="input-group mb-3">
+                          <div class="input-group-append">
+                              <div class="input-icons">
+                              <span class="fas fa-lock"></span>
+                              </div>
+                          </div>
+                          <input
+                            type="password"
+                            class="form-control custom-input"
+                            id="exampleInputPassword"
+                            placeholder="Password"
+                            v-model="password"
+                          />
+                        </div>
                       </div>
                       <div class="form-group">
-                        <input
-                          type="password"
-                          class="form-control form-control-user"
-                          id="exampleInputPassword"
-                          placeholder="Password"
-                          v-model="password"
-                        />
-                      </div>
-                      <div class="form-group">
-                        <div class="custom-control custom-checkbox small">
+                        <div class="custom-control custom-checkbox small center-white">
                           <input
                             type="checkbox"
                             class="custom-control-input"
@@ -70,23 +83,21 @@
                           >
                         </div>
                       </div>
-                      <button
-                        type="submit"
-                        class="btn btn-primary btn-user btn-block"
-                      >
-                        Login
-                      </button>
+                      <div class="form-outline py-3" style="text-align: center;">
+                        <button
+                          type="submit"
+                          class="btn submit-btn"
+                        >
+                          Login
+                        </button>
+                      </div>
                     </form>
-                    <hr />
+                    
                     <div class="text-center">
-                      <router-link class="small" to="/forgot-password"
+                      <router-link to="/forgot-password" class="nav-item nav-link center-white">Forgot Password ?</router-link>
+                      <!-- <router-link class="small" to="/forgot-password"
                         >Forgot Password?</router-link
-                      >
-                    </div>
-                    <div class="text-center">
-                      <router-link class="small" to="/register"
-                        >Create an Account!</router-link
-                      >
+                      > -->
                     </div>
                   </div>
                 </div>
